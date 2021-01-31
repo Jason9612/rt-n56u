@@ -35,6 +35,12 @@
 		var $j = jQuery.noConflict();
 		$j(document).ready(function () {
 			init_itoggle('ss_enable');
+			init_itoggle('trojan_local_enable');
+			init_itoggle('trojan_local');
+			init_itoggle('trojan_link');
+			init_itoggle('v2_local_enable');
+			init_itoggle('v2_local');
+			init_itoggle('v2_link');
 			init_itoggle('switch_enable_x_0');
 			init_itoggle('ss_chdns');
 			init_itoggle('ss_router_proxy', change_ss_watchcat_display);
@@ -1442,6 +1448,74 @@ setTimeout('document.getElementById("btn_ctime").style.display="none";',1000);
 															</div>
 														</td>
 													</tr>
+<tr>
+														<th>本地trojan</th>
+														<td>
+															<div class="main_itoggle">
+																<div id="trojan_local_enable_on_of">
+																	<input type="checkbox" id="trojan_local_enable_fake"
+																		<% nvram_match_x("", "trojan_local_enable", "1", "value=1 checked"); %><% nvram_match_x("", "trojan_local_enable", "0", "value=0"); %>>
+																</div>
+															</div>
+															<div style="position: absolute; margin-left: -10000px;">
+																<input type="radio" value="1" name="trojan_local_enable"
+																	id="trojan_local_enable_1"
+																	<% nvram_match_x("", "trojan_local_enable", "1", "checked"); %>>
+																<启用>
+																	<input type="radio" value="0" name="trojan_local_enable"
+																		id="trojan_local_enable_0"
+																		<% nvram_match_x("", "trojan_local_enable", "0", "checked"); %>>
+																	<停用>
+															</div>
+														</td>
+													</tr>
+<tr>
+                                            <th width="50%">本地trojan路径:</th>
+                                            <td>
+                                                <input type="text"  class="input" size="60" name="trojan_local" value="<% nvram_get_x("","trojan_local"); %>" />
+                                            </td>
+</tr>
+
+<tr>
+                                            <th width="50%">trojan网络地址:</th>
+                                            <td>
+                                                <input type="text"  class="input" size="60" name="trojan_link" value="<% nvram_get_x("","trojan_link"); %>" />
+                                            </td>
+</tr>
+<tr>
+														<th>本地v2</th>
+														<td>
+															<div class="main_itoggle">
+																<div id="v2_local_enable_on_of">
+																	<input type="checkbox" id="v2_local_enable_fake"
+																		<% nvram_match_x("", "v2_local_enable", "1", "value=1 checked"); %><% nvram_match_x("", "v2_local_enable", "0", "value=0"); %>>
+																</div>
+															</div>
+															<div style="position: absolute; margin-left: -10000px;">
+																<input type="radio" value="1" name="v2_local_enable"
+																	id="v2_local_enable_1"
+																	<% nvram_match_x("", "v2_local_enable", "1", "checked"); %>>
+																<启用>
+																	<input type="radio" value="0" name="v2_local_enable"
+																		id="v2_local_enable_0"
+																		<% nvram_match_x("", "v2_local_enable", "0", "checked"); %>>
+																	<停用>
+															</div>
+														</td>
+													</tr>
+<tr>
+                                            <th width="50%">本地v2路径:</th>
+                                            <td>
+                                                <input type="text"  class="input" size="60" name="v2_local" value="<% nvram_get_x("","v2_local"); %>" />
+                                            </td>
+</tr>
+
+<tr>
+                                            <th width="50%">v2网络地址:</th>
+                                            <td>
+                                                <input type="text"  class="input" size="60" name="v2_link" value="<% nvram_get_x("","v2_link"); %>" />
+                                            </td>
+</tr>
 													<tr>
 														<th>主服务器:
 														</th>

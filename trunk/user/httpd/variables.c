@@ -992,6 +992,12 @@
 #if defined(APP_SHADOWSOCKS)
 	struct variable variables_ShadowsocksConf[] = {
 			{"ss_enable","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"trojan_local_enable","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"trojan_local","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"trojan_link","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"v2_local_enable","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"v2_local","",NULL, EVM_RESTART_SHADOWSOCKS},
+			{"v2_link","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"global_server","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"backup_server","",NULL, EVM_RESTART_SHADOWSOCKS},
 	        {"udp_relay_server","",NULL, EVM_RESTART_SHADOWSOCKS},
