@@ -256,7 +256,7 @@ function change_led_all(){
                                         <tr>
                                             <th width="50%"><#TweaksEventShort#></th>
                                             <td>
-                                                <select name="ez_action_short" class="input" style="width: 320px;">
+                                                <select name="ez_action_short" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem01#></option>
                                                     <option value="2" ><#TweaksWPSItem02#> 2.4</option>
@@ -279,7 +279,7 @@ function change_led_all(){
                                         <tr>
                                             <th><#TweaksEventLong#></th>
                                             <td>
-                                                <select name="ez_action_long" class="input" style="width: 320px;">
+                                                <select name="ez_action_long" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem02#> 2.4</option>
                                                     <option value="2" ><#TweaksWPSItem02#> 5</option>
@@ -310,7 +310,7 @@ function change_led_all(){
                                         <tr>
                                             <th width="50%"><#TweaksEventShort#></th>
                                             <td>
-                                                <select name="fn1_action_short" class="input" style="width: 320px;">
+                                                <select name="fn1_action_short" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem01#></option>
                                                     <option value="2" ><#TweaksWPSItem02#> 2.4</option>
@@ -333,7 +333,7 @@ function change_led_all(){
                                         <tr>
                                             <th><#TweaksEventLong#></th>
                                             <td>
-                                                <select name="fn1_action_long" class="input" style="width: 320px;">
+                                                <select name="fn1_action_long" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem02#> 2.4</option>
                                                     <option value="2" ><#TweaksWPSItem02#> 5</option>
@@ -364,7 +364,7 @@ function change_led_all(){
                                         <tr>
                                             <th width="50%"><#TweaksEventShort#></th>
                                             <td>
-                                                <select name="fn2_action_short" class="input" style="width: 320px;">
+                                                <select name="fn2_action_short" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem01#></option>
                                                     <option value="2" ><#TweaksWPSItem02#> 2.4</option>
@@ -387,7 +387,7 @@ function change_led_all(){
                                         <tr>
                                             <th><#TweaksEventLong#></th>
                                             <td>
-                                                <select name="fn2_action_long" class="input" style="width: 320px;">
+                                                <select name="fn2_action_long" class="input">
                                                     <option value="0" ><#TweaksWPSItem00#></option>
                                                     <option value="1" ><#TweaksWPSItem02#> 2.4</option>
                                                     <option value="2" ><#TweaksWPSItem02#> 5</option>
@@ -434,7 +434,7 @@ function change_led_all(){
                                         <tr id="row_led_wan">
                                             <th><#TweaksLEDWAN#></th>
                                             <td>
-                                                <select name="front_led_wan" class="input" style="width: 320px;">
+                                                <select name="front_led_wan" class="input">
                                                     <option value="0" <% nvram_match_x("", "front_led_wan", "0","selected"); %>><#btn_Disable#></option>
                                                     <option value="1" <% nvram_match_x("", "front_led_wan", "1","selected"); %>><#TweaksLEDItem00#></option>
                                                     <option value="2" <% nvram_match_x("", "front_led_wan", "2","selected"); %>><#TweaksLEDItem03#> (*)</option>
@@ -445,7 +445,7 @@ function change_led_all(){
                                         <tr id="row_led_lan" style="display:none;">
                                             <th><#TweaksLEDLAN#></th>
                                             <td>
-                                                <select name="front_led_lan" class="input" style="width: 320px;">
+                                                <select name="front_led_lan" class="input">
                                                     <option value="0" <% nvram_match_x("", "front_led_lan", "0","selected"); %>><#btn_Disable#></option>
                                                     <option value="1" <% nvram_match_x("", "front_led_lan", "1","selected"); %>><#TweaksLEDItem00#> (*)</option>
                                                     <option value="2" <% nvram_match_x("", "front_led_lan", "2","selected"); %>><#TweaksLEDItem01#></option>
@@ -456,7 +456,7 @@ function change_led_all(){
                                         <tr id="row_led_usb" style="display:none;">
                                             <th><#TweaksLEDUSB#></th>
                                             <td>
-                                                <select name="front_led_usb" class="input" style="width: 320px;">
+                                                <select name="front_led_usb" class="input">
                                                     <option value="0" <% nvram_match_x("", "front_led_usb", "0","selected"); %>><#btn_Disable#></option>
                                                     <option value="1" <% nvram_match_x("", "front_led_usb", "1","selected"); %>><#TweaksLEDItem05#> (*)</option>
                                                     <option value="2" <% nvram_match_x("", "front_led_usb", "2","selected"); %>><#TweaksLEDItem06#></option>
@@ -467,7 +467,7 @@ function change_led_all(){
                                         <tr id="row_led_wif" style="display:none;">
                                             <th><#TweaksLEDWIF#></th>
                                             <td>
-                                                <select name="front_led_wif" class="input" style="width: 320px;">
+                                                <select name="front_led_wif" class="input">
                                                     <option value="0" <% nvram_match_x("", "front_led_wif", "0","selected"); %>><#btn_Disable#></option>
                                                     <option value="1" <% nvram_match_x("", "front_led_wif", "1","selected"); %>><#TweaksLEDItem09#> (*)</option>
                                                 </select>
@@ -476,7 +476,7 @@ function change_led_all(){
                                         <tr id="row_led_pwr">
                                             <th><#TweaksLEDPWR#></th>
                                             <td>
-                                                <select name="front_led_pwr" class="input" style="width: 320px;">
+                                                <select name="front_led_pwr" class="input">
                                                     <option value="0" <% nvram_match_x("", "front_led_pwr", "0","selected"); %>><#btn_Disable#>, <#TweaksLEDItem11#></option>
                                                     <option value="1" <% nvram_match_x("", "front_led_pwr", "1","selected"); %>><#btn_Enable#>, <#TweaksLEDItem11#> (*)</option>
                                                 </select>
@@ -485,7 +485,7 @@ function change_led_all(){
                                         <tr id="row_eth_phy_led0">
                                             <th><#TweaksLEDEth0#></th>
                                             <td>
-                                                <select name="ether_led0" class="input" style="width: 320px;">
+                                                <select name="ether_led0" class="input">
                                                     <option value="0"  <% nvram_match_x("", "ether_led0", "0", "selected"); %>>Link 1000 Mbps, TX/RX activity</option>
                                                     <option value="1"  <% nvram_match_x("", "ether_led0", "1", "selected"); %>>Link 100 Mbps, TX/RX activity</option>
                                                     <option value="2"  <% nvram_match_x("", "ether_led0", "2", "selected"); %>>Link 10 Mbps, TX/RX activity</option>
@@ -504,7 +504,7 @@ function change_led_all(){
                                         <tr id="row_eth_phy_led1">
                                             <th><#TweaksLEDEth1#></th>
                                             <td>
-                                                <select name="ether_led1" class="input" style="width: 320px;">
+                                                <select name="ether_led1" class="input">
                                                     <option value="0"  <% nvram_match_x("", "ether_led1", "0", "selected"); %>>Link 1000 Mbps, TX/RX activity (*)</option>
                                                     <option value="1"  <% nvram_match_x("", "ether_led1", "1", "selected"); %>>Link 100 Mbps, TX/RX activity</option>
                                                     <option value="2"  <% nvram_match_x("", "ether_led1", "2", "selected"); %>>Link 10 Mbps, TX/RX activity</option>
