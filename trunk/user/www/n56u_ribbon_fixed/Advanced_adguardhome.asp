@@ -151,8 +151,19 @@ function done_validating(action){
 												</div>
 											</td>
 										</tr>
+										<tr>
+											<th width="30%" style="border-top: 0 none;">本地adg路径</th>
+											<td>
+												<input type="text" class="input" size="60" name="adg_local" value="<% nvram_get_x("","adg_local"); %>" />
+											</td>
 										</tr>
-                                         <tr>
+										<tr>
+											<th width="30%" style="border-top: 0 none;">adg网络地址:</th>
+											<td>
+												<input type="text" class="input" size="60" name="adg_link" value="<% nvram_get_x("","adg_link"); %>" />
+											</td>
+										</tr>
+                                         					<tr>
 											<th><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 1, 1);">DNS重定向</a></th>
 											<td>
 												<select name="adg_redirect" class="input" style="width: 200px">
