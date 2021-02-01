@@ -1,4 +1,6 @@
 #!/bin/sh
+adg_local=`nvram get adg_local`
+adg_link=`nvram get adg_link`
 
 change_dns() {
 if [ "$(nvram get adg_redirect)" = 1 ]; then
@@ -137,16 +139,22 @@ fi
 }
 
 dl_adg(){
-logger -t "AdGuardHome" "下载AdGuardHome"
-#wget --no-check-certificate -O /tmp/AdGuardHome.tar.gz https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.101.0/AdGuardHome_linux_mipsle.tar.gz
-curl -k -s -o /tmp/AdGuardHome/AdGuardHome --connect-timeout 10 --retry 3 https://cdn.jsdelivr.net/gh/vb1980/rt-n56u/trunk/user/adguardhome/AdGuardHome
-if [ ! -f "/tmp/AdGuardHome/AdGuardHome" ]; then
-logger -t "AdGuardHome" "AdGuardHome下载失败，请检查是否能正常访问github!程序将退出。"
-nvram set adg_enable=0
-exit 0
+#logger -t "AdGuardHome" "下载AdGuardHome"
+#curl -k -s -o /tmp/AdGuardHome/AdGuardHome --connect-timeout 10 --retry 3 https://cdn.jsdelivr.net/gh/vb1980/rt-n56u/trunk/user/adguardhome/AdGuardHome
+if [ -s $adg_local ] ; then
+  cat $adg_local > /tmp/AdGuardHome/AdGuardHome
 else
-logger -t "AdGuardHome" "AdGuardHome下载成功。"
-chmod 777 /tmp/AdGuardHome/AdGuardHome
+  logger -t "AdGuardHome" "下载AdGuardHome"
+  curl -k -s -o /tmp/AdGuardHome/AdGuardHome --connect-timeout 10 --retry 3 $adg_link
+fi
+
+if [ ! -f "/tmp/AdGuardHome/AdGuardHome" ]; then
+  logger -t "AdGuardHome" "AdGuardHome下载失败，请检查是否能正常访问github!程序将退出。"
+  nvram set adg_enable=0
+  exit 0
+else
+  logger -t "AdGuardHome" "AdGuardHome下载成功。"
+  chmod 777 /tmp/AdGuardHome/AdGuardHome
 fi
 }
 
