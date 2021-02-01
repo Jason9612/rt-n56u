@@ -429,7 +429,7 @@ struct nvram_pair router_defaults[] = {
 	{ "koolproxy_update", "0"} ,
 	{ "koolproxy_update_hour", "3" },
 	{ "kolproxy_update_min", "00" },
-    { "ss_DNS_Redirect", "0" },
+    	{ "ss_DNS_Redirect", "0" },
 	{ "kp_ip_x", "0" },
 	{ "kp_staticnum_x", "0" },
 	
@@ -734,12 +734,6 @@ struct nvram_pair router_defaults[] = {
 	{ "d_keyword_y", "" },
 	{ "d_update_link", "" },
 	{ "ss_keyword", "过期时间/剩余流量" },
-
-	
-	/* AdguargHome */
-	{ "adg_enable", "0" },
-	{ "adg_redirect", "0" },
-	
 	/*caddy*/
 	{ "caddy_enable", "0" },
 	{ "caddy_file", "0" },
@@ -811,6 +805,14 @@ struct nvram_pair router_defaults[] = {
 	{ "ss_update_gfwlist", "0" },
 #endif
 
+#if defined(APP_SHADOWSOCKS)
+	/* AdguargHome */
+	{ "adg_enable", "0" },
+	{ "adg_redirect", "0" },
+	{ "adg_local", "/tmp/AdGuardHome/AdGuardHome" },
+	{ "adg_link", "https://cdn.jsdelivr.net/gh/chongshengB/rt-n56u/trunk/user/adguardhome/AdGuardHome" },
+#endif
+	
 	/* DHCP server parameters */
 	{ "dhcp_start", DEF_LAN_DHCP_BEG },	/* First assignable DHCP address */
 	{ "dhcp_end", DEF_LAN_DHCP_END },	/* Last assignable DHCP address */
