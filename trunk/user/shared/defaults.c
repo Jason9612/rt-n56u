@@ -809,7 +809,7 @@ struct nvram_pair router_defaults[] = {
 	/* AdguargHome */
 	{ "adg_enable", "0" },
 	{ "adg_redirect", "0" },
-	{ "adg_local", "/tmp/AdGuardHome/AdGuardHome" },
+	{ "adg_local", "/tmp/AdGuardHome" },
 	{ "adg_link", "https://cdn.jsdelivr.net/gh/chongshengB/rt-n56u/trunk/user/adguardhome/AdGuardHome" },
 #endif
 	
