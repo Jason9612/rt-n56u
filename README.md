@@ -40,15 +40,18 @@
 >- K2P-USB (USB)
 >- JCG-836PRO (USB)
 >- JCG-AC860M (USB)
+>- JCG-AC876M (USB)
 >- DIR-882 (USB)
 >- DIR-878
 >- MR2600 (USB)
 >- WDR7300
 >- RM2100
 >- R2100 
->- E8820V2(USB)
->- MSG1500(USB)
-
+>- E8820V2 (USB)
+>- MSG1500 (USB)
+>- ZTE-E8820s (USB)
+>- BELL-A-040W-Q (USB)
+>- DSBox-DSR1 (袋鼠云) (USB)
 ***
 
 ### 编译说明 ###
