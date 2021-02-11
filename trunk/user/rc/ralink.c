@@ -688,6 +688,7 @@ gen_ralink_config(int is_soc_ap, int is_aband, int disable_autoscan)
 	fprintf(fp, "VHT_Sec80_Channel=%d\n", 0);
 	fprintf(fp, "WNMEnable=%d\n", 0);
 	fprintf(fp, "SKUenable=%d\n", 0); //TODO
+	fprintf(fp, "PowerUpenable=%d\n", 0);
 #endif
 #if defined (USE_WID_2G) && USE_WID_2G==7615
 	if (!is_aband) {
@@ -1616,3 +1617,5 @@ get_apcli_connected(const char *ifname)
 
 	return 0;
 }
+
+
